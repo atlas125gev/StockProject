@@ -1,0 +1,29 @@
+!pip install yfinance
+
+###################################
+
+import yfinance as yf
+
+ko = yf.Ticker("ko")
+print(ko)
+
+###################################
+
+ko.info
+
+###################################
+
+ko.history(start= '2021-04-30', end= '2021-06-15', interval= '5m')
+
+###################################
+
+import pandas as pd                        
+from pytrends.request import TrendReq
+pytrend = TrendReq()
+
+###################################
+
+pytrend.build_payload(kw_list=['Coke stock'])
+# Interest by Region
+df = pytrend.interest_by_region()
+df.head(20)
