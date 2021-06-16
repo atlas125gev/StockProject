@@ -1,0 +1,61 @@
+!pip install yfinance
+
+###################################
+
+import yfinance as yf
+
+ko = yf.Ticker("ko")
+print(ko)
+
+###################################
+
+ko.info
+
+###################################
+
+ko.history(start= '2021-04-30', end= '2021-06-15', interval= '5m')
+
+###################################
+
+import pandas as pd                        
+from pytrends.request import TrendReq
+pytrend = TrendReq()
+
+###################################
+
+pytrend.build_payload(kw_list=['Coke stock'])
+# Interest by Region
+df = pytrend.interest_by_region()
+df.head(20)
+
+###################################
+
+!pip install pandas_datareader
+
+###################################
+
+#import external pandas_datareader library with alias of web
+import pandas_datareader as web
+ 
+#import datetime internal datetime module
+#datetime is a Python module
+import datetime
+ 
+###################################
+
+#datetime.datetime is a data type within the datetime module
+start = datetime.datetime(2021, 4, 30)
+end = datetime.datetime(2021, 6, 15)
+ 
+#DataReader method name is case sensitive
+df = web.DataReader("ko", 'yahoo', start, end)
+ 
+#invoke to_csv for df dataframe object from 
+#DataReader method in the pandas_datareader library
+ 
+#..\first_yahoo_prices_to_csv_demo.csv must not
+#be open in another app, such as Excel
+ 
+df.to_csv('first_yahoo_prices_volumes_to_csv_demo.csv')
+
+###################################
