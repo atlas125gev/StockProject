@@ -1,4 +1,4 @@
-Date,Open,High,Low,Close,Adj Close,Volume
+Previous_Date,Previous_Open,Previous_High,Previous_Low,Previous_Close,Previous_Adj_Close,Previous_Volume
 2020-03-31,0.001851,0.001851,0.001805,0.001811,0.001811,156195510
 2020-04-01,0.001812,0.001867,0.001776,0.001867,0.001867,163418627
 2020-04-02,0.001868,0.001940,0.001850,0.001882,0.001882,165879605
